@@ -5,7 +5,6 @@ A small library for webpack config plugin to export war file
 
 ## Installation
 
-  npm install
   npm install webpack-deploy2war --save-dev
 
 ## Usage
@@ -21,3 +20,4 @@ A small library for webpack config plugin to export war file
 ## Release History
 
 * 0.1.0 Initial release
+* 0.1.1 If folder not exists then create
