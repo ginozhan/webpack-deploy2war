@@ -13,7 +13,7 @@ DeployToWar.prototype.apply = function (compiler) {
 
     compiler.plugin('done', function () {
 
-        if (!fs.existsSync(this.distFolder)) {
+        if (!fs.existsSync(self.distFolder)) {
             return;
         }
 
