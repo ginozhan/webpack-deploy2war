@@ -1,13 +1,13 @@
 var fs = require('fs');
 var archiver = require('archiver');
 
-function WebpackWarPlugin(options) {
+function DeployToWar(options) {
     this.options = options || {};
     this.fileName = options.fileName || 'project.zip';
     this.distFolder = options.distFolder || 'dist';
 }
 
-WebpackWarPlugin.prototype.apply = function (compiler) {
+DeployToWar.prototype.apply = function (compiler) {
     var self = this;
     var options = compiler.options;
 
