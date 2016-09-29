@@ -1,13 +1,13 @@
 {
-  "name": "webpack-deploy2war",
-  "version": "0.1.1",
+  "name": "webpack-war-plugin",
+  "version": "0.2.0",
   "description": "A small library for webpack config plugin to export war file",
   "main": "index.js",
   "scripts": {
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ginozhan/webpack-deploy2war.git"
+    "url": "git+https://github.com/thieme-ebcont/webpack-deploy2war.git"
   },
   "keywords": [
     "deploy",
@@ -15,11 +15,8 @@
   ],
   "author": "Gino Zhan",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ginozhan/webpack-deploy2war/issues"
-  },
-  "homepage": "https://github.com/ginozhan/webpack-deploy2war#readme",
+  "homepage": "https://github.com/thieme-ebcont/webpack-deploy2war.git",
   "dependencies": {
-    "archiver": "^0.21.0"
+    "archiver": "^1.1.0"
   }
 }
