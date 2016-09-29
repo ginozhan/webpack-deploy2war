@@ -1,5 +1,5 @@
 {
-  "name": "webpack-war-plugin",
+  "name": "webpack-deploy2war",
   "version": "0.2.0",
   "description": "A small library for webpack config plugin to export war file",
   "main": "index.js",
