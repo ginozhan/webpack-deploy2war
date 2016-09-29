@@ -7,22 +7,27 @@ function DeployToWar(options) {
     this.distFolder = options.distFolder || 'dist';
 }
 
-DeployToWar.prototype.apply = function(compiler) {
+DeployToWar.prototype.apply = function (compiler) {
     var self = this;
     var options = compiler.options;
-    compiler.plugin('done', function() {
-      
-      var dir = require('path').dirname(self.fileName);
-      if (!fs.existsSync(dir)){
-          fs.mkdirSync(dir);
-      }
 
-      var output = fs.createWriteStream(self.fileName);
-      var archive = archiver('zip');
-      
-      archive.pipe(output);
-      archive.directory(self.distFolder,'/')
-      archive.finalize();
+    compiler.plugin('done', function () {
+
+        if (!fs.existsSync(self.distFolder)) {
+            return;
+        }
+
+        var dir = require('path').dirname(self.fileName);
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+
+        var output = fs.createWriteStream(self.fileName);
+        var archive = archiver('zip');
+
+        archive.pipe(output);
+        archive.directory(self.distFolder, '/')
+        archive.finalize();
     });
 };
 
